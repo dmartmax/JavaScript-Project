@@ -1,5 +1,6 @@
 const defaultResult = 0;
 let currentResult = defaultResult;
+const outputDescription = 'That was an easy one!'
 
 //currentResult = ((currentResult + 10) * 3) / 2 - 1; -- using simple operators
 //let calculationDescription = '(' + defaultResult + ' + 10) * 3 / 2 - 1' -- using single quote.
@@ -9,12 +10,9 @@ let currentResult = defaultResult;
 
 
 // --- Functions ---
-function add(num1, num2) {
-  return num1 + num2;
+function add() {
+  currentResult = currentResult + userInput.value;
+  outputResult(currentResult, outputDescription);
 }
 
-currentResult = add(5,15);
-
-const outputDescription = 'That was an easy one!'
-outputResult(currentResult, outputDescription);
-
+addBtn.addEventListener('click', add);
